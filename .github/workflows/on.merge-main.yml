@@ -26,7 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Apply Terraform Changes
     needs: validate-scripts
-    environment: test
 
     steps:
       - name: Checkout code
