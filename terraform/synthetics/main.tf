@@ -1,10 +1,8 @@
-data "grafana_synthetic_monitoring_probes" "main" {}
-
 resource "grafana_synthetic_monitoring_check" "Synthetics_BrowserCheck_login" {
   job     = "Browser:Login"
   target  = "login"
   enabled = true
-  probes  = [data.grafana_synthetic_monitoring_probes.main.probes.London]
+  probes  = [1]
   labels = {
     check_type = "browser"
   }
@@ -25,7 +23,7 @@ resource "grafana_synthetic_monitoring_check" "Http_GetPizza" {
   job     = "Http:GetPizza"
   target  = "http"
   enabled = true
-  probes  = [data.grafana_synthetic_monitoring_probes.main.probes.Frankfurt, ]
+  probes  = [1]
   labels = {
     check_type = "http"
   }
