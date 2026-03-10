@@ -26,7 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Terraform Plan
     needs: validate-scripts
-    environment: test
 
     steps:
       - name: Checkout code
